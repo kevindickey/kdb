@@ -7,6 +7,7 @@ public class DataField<T> {
     public T getValue(){
         return this.value;
     };
+    
     public void setValue(T val) {
         this.value = val;
     }

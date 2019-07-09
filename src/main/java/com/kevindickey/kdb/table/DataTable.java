@@ -4,6 +4,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import com.kevindickey.kdb.connections.ConnectionProvider;
+import com.kevindickey.kdb.row.DataRow;
 import com.kevindickey.kdb.sql.SqlProvider;
 
 
@@ -46,6 +47,10 @@ public class DataTable {
 
         String sql = this.provider.dropTableSql(this, ifExists, shouldCascade);
         executeSql(sql);
+    }
+
+    public void insertRow(DataRow data) throws Exception {
+        String sql = this.provider.insertRowSql(this, data);
     }
 
     private void executeSql(String sql) throws SQLException {
