@@ -1,4 +1,4 @@
-package com.kevindickey.kdb.kdb.sql.createTable;
+package com.kevindickey.kdb.sql.createTable;
 
 import java.lang.reflect.Field;
 

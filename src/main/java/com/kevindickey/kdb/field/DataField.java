@@ -1,4 +1,4 @@
-package com.kevindickey.kdb.kdb.field;
+package com.kevindickey.kdb.field;
 
 
 public class DataField<T> {

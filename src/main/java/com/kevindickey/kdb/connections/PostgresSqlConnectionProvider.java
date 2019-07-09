@@ -1,4 +1,4 @@
-package com.kevindickey.kdb.kdb.connections;
+package com.kevindickey.kdb.connections;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

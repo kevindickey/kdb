@@ -1,4 +1,4 @@
-package com.kevindickey.kdb.kdb.sql.dropTable;
+package com.kevindickey.kdb.sql.dropTable;
 
 public class DropTablePostgreSqlBuilder implements DropTableSqlBuilder {
 

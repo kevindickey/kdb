@@ -1,10 +1,10 @@
-package com.kevindickey.kdb.kdb;
+package com.kevindickey.kdb;
 
 import java.sql.SQLException;
 
-import com.kevindickey.kdb.kdb.connections.PostgresSqlConnectionProvider;
-import com.kevindickey.kdb.kdb.sql.PostgreSqlProvider;
-import com.kevindickey.kdb.kdb.tables.CompanyTable;
+import com.kevindickey.kdb.connections.PostgresSqlConnectionProvider;
+import com.kevindickey.kdb.sql.PostgreSqlProvider;
+import com.kevindickey.kdb.tables.CompanyTable;
 
 import org.junit.BeforeClass;
 import org.junit.Test;

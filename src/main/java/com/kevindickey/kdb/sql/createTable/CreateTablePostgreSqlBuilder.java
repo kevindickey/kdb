@@ -1,8 +1,8 @@
-package com.kevindickey.kdb.kdb.sql.createTable;
+package com.kevindickey.kdb.sql.createTable;
 
 import java.lang.reflect.Field;
 
-import com.kevindickey.kdb.kdb.field.DataFieldProperties;
+import com.kevindickey.kdb.field.DataFieldProperties;
 
 public class CreateTablePostgreSqlBuilder implements CreateTableSqlBuilder {
 

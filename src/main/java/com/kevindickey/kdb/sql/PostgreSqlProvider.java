@@ -1,12 +1,12 @@
-package com.kevindickey.kdb.kdb.sql;
+package com.kevindickey.kdb.sql;
 
 import java.lang.reflect.Field;
 import java.util.Optional;
 
-import com.kevindickey.kdb.kdb.row.DataRowProperties;
-import com.kevindickey.kdb.kdb.sql.createTable.CreateTablePostgreSqlBuilder;
-import com.kevindickey.kdb.kdb.sql.dropTable.DropTablePostgreSqlBuilder;
-import com.kevindickey.kdb.kdb.table.DataTable;
+import com.kevindickey.kdb.row.DataRowProperties;
+import com.kevindickey.kdb.sql.createTable.CreateTablePostgreSqlBuilder;
+import com.kevindickey.kdb.sql.dropTable.DropTablePostgreSqlBuilder;
+import com.kevindickey.kdb.table.DataTable;
 
 public class PostgreSqlProvider implements SqlProvider {
 

@@ -1,8 +1,8 @@
-package com.kevindickey.kdb.kdb.tables;
+package com.kevindickey.kdb.tables;
 
-import com.kevindickey.kdb.kdb.field.DataField;
-import com.kevindickey.kdb.kdb.field.DataFieldProperties;
-import com.kevindickey.kdb.kdb.row.DataRow;
+import com.kevindickey.kdb.field.DataField;
+import com.kevindickey.kdb.field.DataFieldProperties;
+import com.kevindickey.kdb.row.DataRow;
 
 public class CompanyTableRow extends DataRow {
     @DataFieldProperties(Name = "ID", Type = "INT", IsNullable = false, IsPrimaryKey = true)

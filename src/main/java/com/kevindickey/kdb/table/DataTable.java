@@ -1,10 +1,10 @@
-package com.kevindickey.kdb.kdb.table;
+package com.kevindickey.kdb.table;
 
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import com.kevindickey.kdb.kdb.connections.ConnectionProvider;
-import com.kevindickey.kdb.kdb.sql.SqlProvider;
+import com.kevindickey.kdb.connections.ConnectionProvider;
+import com.kevindickey.kdb.sql.SqlProvider;
 
 
 public class DataTable {

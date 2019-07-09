@@ -1,4 +1,4 @@
-package com.kevindickey.kdb.kdb;
+package com.kevindickey.kdb;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
