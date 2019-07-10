@@ -1,8 +1,11 @@
 package com.kevindickey.kdb.sql;
 
 import java.lang.reflect.Field;
+import java.sql.PreparedStatement;
 import java.util.Optional;
 
+import com.kevindickey.kdb.connections.ConnectionProvider;
+import com.kevindickey.kdb.connections.PostgreSqlConnectionProvider;
 import com.kevindickey.kdb.row.DataRow;
 import com.kevindickey.kdb.row.DataRowProperties;
 import com.kevindickey.kdb.sql.createTable.CreateTablePostgreSqlBuilder;
@@ -32,10 +35,10 @@ public class PostgreSqlProvider implements SqlProvider {
 
     
     @Override
-    public String insertRowSql(DataTable table, DataRow data) throws Exception {
+    public PreparedStatement insertRowSql(DataTable table, DataRow data, ConnectionProvider connectionProvider) throws Exception {
         getFieldsAndValidate(table);
 
-        return this.insertRowSqlBuilder.build(table.getName(), data);
+        return this.insertRowSqlBuilder.build(table.getName(), data, connectionProvider);
     }
 
     private Optional<Field[]> getFieldsAndValidate(DataTable table) throws Exception {

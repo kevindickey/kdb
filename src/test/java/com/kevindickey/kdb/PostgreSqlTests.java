@@ -20,25 +20,29 @@ public class PostgreSqlTests {
 	private static PostgreSqlProvider sqlProvider;
 
 	@Test
-	public void createTableTest() throws Exception {
+	public void createAndDropTableTest() throws Exception {
 		CompanyTable table = new CompanyTable(sqlProvider, connectionProvider);
 		table.create();
-	}
-
-
-	@Test
-	public void dropTableTableTest() throws Exception {
-		CompanyTable table = new CompanyTable(sqlProvider, connectionProvider);
 		table.drop(true, false);
+
 	}
 
 	@Test
 	public void insertIntoTableTest() throws Exception {
 		CompanyTable table = new CompanyTable(sqlProvider, connectionProvider);
+		table.create();
 		CompanyTableRow insertRowData = new CompanyTableRow();
 		insertRowData.id.setValue(123);
-		
+		insertRowData.address.setValue("6561 South Nod Hill Road #22, Cottonwood Heights, UT 84121; drop table company;");
+		insertRowData.name.setValue("Sophia Ducroisy");
+		insertRowData.salary.setValue((float)840_000);
+		insertRowData.age.setValue(28);
+
+		table.insertRow(insertRowData);
+		table.drop(true, false);
 	}
+
+
 
 
 	@BeforeClass

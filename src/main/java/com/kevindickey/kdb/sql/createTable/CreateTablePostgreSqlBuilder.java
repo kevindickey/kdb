@@ -36,7 +36,7 @@ public class CreateTablePostgreSqlBuilder implements CreateTableSqlBuilder {
 
     private void buildFieldSql(StringBuilder sqlStatement, Field[] fields, int i, DataFieldProperties fieldProperties) {
         sqlStatement.append(fieldProperties.Name()).append(" ");
-        sqlStatement.append(fieldProperties.Type()).append(" ");
+        sqlStatement.append(fieldProperties.Type().getDataType()).append(" ");
 
         if (fieldProperties.Length() > 0) {
             sqlStatement.append("(").append(fieldProperties.Length()).append(")");

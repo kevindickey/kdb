@@ -10,7 +10,6 @@ public class PostgreSqlConnectionProvider implements ConnectionProvider {
 
     @Override
     public Connection connect(String uri, String user, String password) throws SQLException, ClassNotFoundException {
-       // Class.forName("org.postgresql.Driver");
         this.connection = DriverManager.getConnection(uri, user, password);
         return this.getConnection();
     }

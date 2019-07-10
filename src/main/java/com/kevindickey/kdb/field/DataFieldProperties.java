@@ -6,7 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 @Retention(RetentionPolicy.RUNTIME)
 public @ interface DataFieldProperties {
     String Name();
-    String Type();
+    PostgreSqlDataType Type();
     long Length() default 0;
     boolean IsNullable() default true;
     boolean IsPrimaryKey() default false;

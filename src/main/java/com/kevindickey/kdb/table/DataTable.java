@@ -1,5 +1,6 @@
 package com.kevindickey.kdb.table;
 
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -50,7 +51,8 @@ public class DataTable {
     }
 
     public void insertRow(DataRow data) throws Exception {
-        String sql = this.provider.insertRowSql(this, data);
+        PreparedStatement sqlStatement = this.provider.insertRowSql(this, data, connectionProvider);
+        sqlStatement.execute();
     }
 
     private void executeSql(String sql) throws SQLException {
